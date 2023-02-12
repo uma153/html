@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>odd or even</title>
+        <script>
+            function OddEven()
+            {
+                var num;
+                num=parseInt(document.getElementById("num").value);
+                if(num%2==0)
+                {
+                    document.write(num + "is an even Number");
+                }
+                else
+                {
+                    document.write(num + "is an odd Number");
+
+                }                
+            }
+        </script>
+    </head>
+    <body>
+        Enter the Number:<input type="num" name="num" id="num"/><br>
+        <input type="button" value="check_number" onclick="OddEven()"/>
+    </body>
+</html>
