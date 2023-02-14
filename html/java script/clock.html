@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock</title>
+        <script type="text/javascript">
+            function clock()
+            {
+                var time = new Date();
+                document.write("Time = "+time + "<br>");
+                var hour = time.getHours();
+                document.write("Hours = "+hour + "<br>");
+                var minute = time.getMinutes();
+                document.write("Minutes = "+minute + "<br>");
+                var second = time.getSeconds();
+                document.write("Seconds = "+second + "<br>");
+                var temp = "" + ((hour > 12) ? hour - 12 : hour);
+                document.write("Temp = "+temp + "<br>");
+                if(hour == 0)
+                temp = "12";
+                temp += ((minute < 10) ? ":0" : ":") + minute;
+                document.write("Temp = " +temp + "<br>");
+                temp += ((second < 10) ? ":0" : ":") + second;
+                document.write("Temp = "+temp + "<br>");
+                temp += (hour >= 12) ? "P.M." : "A.M.";
+                document.write("Temp = "+temp + "<br>");
+                document.write(temp);
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="clock()" value="click"/>
+    </body>
+</html>
